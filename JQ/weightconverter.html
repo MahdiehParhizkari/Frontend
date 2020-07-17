@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pound to Kgr</title>
+</head>
+<style>
+	.form{
+		width:500px;
+		height:300px;
+		background-color:blue;
+		text-align:center;
+		color:white;
+		padding-top:30px;
+	}
+	.error{
+		color:red;
+	}
+
+	.no-error{
+		color:green;
+	}
+</style>
+<body>
+	<div style="text-align:center;">
+		<form class="form">
+			<h2>Weight Converter (pounds to kg)</h2>
+			<p>Enter weight value in pounds:</p>
+			<label>Pounds</label>
+			<input type="number" step=".1">
+			<p>Your weight in Kilograms is: <input id="result"></p>
+			<p class="error"></p>
+			<p class="no-error"></p>
+		</form>
+	</div>
+	<script>
+		const form=document.querySelector('form');
+
+		form.addEventListener('submit', function(e){
+			e.preventDefault();
+			
+			const input=document.querySelector('input');
+			let results=document.querySelector('span');
+			let PoundsToKG;
+
+			if((input.value<=0)|| (isNaN(input.value))){
+				results.classList.add('error');
+				results.innerHTML="<p>Please enter a value number!</p>"
+				setTimeout(function(){
+					results.innerHTML='';
+					results.classList.remove('error');
+				}, 2000)
+				input.value='';
+			}else{
+				PoundsToKG=Number(input.value)/2.2;
+				results.classList.add('no-error');
+				results.innerHTML=`${PoundsToKG, toFixed(2)}`;
+				setTimeout(function(){
+					results.innerHTML='';
+					input.value='';
+					results.classList.remove('no-error');
+				}, 1000)
+			}
+
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Scheme Switcher</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+	#div{
+		text-align:center;
+		width:100%;
+		height:100%;
+	}
+	#grey{
+		width:100px;
+		height:100px;
+		border-radius:50px;
+		border:3px solid black;
+		background-color:grey;
+	}
+
+	#white{
+		width:100px;
+		height:100px;
+		border-radius:50px;
+		border:3px solid black;
+		background-color:white;
+	}
+
+	#blue{
+		width:100px;
+		height:100px;
+		border-radius:50px;
+		border:3px solid black;
+		background-color:blue;
+	}
+
+	#yellow{
+		width:100px;
+		height:100px;
+		border-radius:50px;
+		border:3px solid black;
+		background-color:yellow;
+	}
+</style>
+<body>
+	<div id="div">
+	<h2>Color Scheme Switcher</h2>
+	<button id="grey"></button>
+	<button id="white"></button>
+	<button id="blue"></button>
+	<button id="yellow"></button>
+	<h2>Try clicking on one of the colors above to change the background color of this page!</h2>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$("#grey").click(function(){
+				$("#div").css('backgroundColor', 'grey')
+
+			});
+
+			$("#white").click(function(){
+				$("#div").css('backgroundColor', 'white')
+
+			});
+			$("#blue").click(function(){
+				$("#div").css('backgroundColor', 'blue')
+
+			});
+
+			$("#yellow").click(function(){
+				$("#div").css('backgroundColor', 'yellow')
+
+			});
+		});		
+	</script>
+
+
+</body>
+</html>

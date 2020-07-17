@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function factorial(k)
+		{
+				if (k==0 || k==1) 
+				return 1;
+			else
+				return (k*factorial(k-1));
+		}
+
+		function prefactorial()
+		{
+			var k = document.getElementById('txtnum1').value
+			alert (factorial(k));
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txtnum1" />
+	<input type="button" value="fact" onclick="prefactorial()" />
+</body>
+</html>

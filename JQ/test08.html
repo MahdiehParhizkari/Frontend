@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CarShow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  .div{
+    text-align:center;
+    width:100%;
+    padding-top:30px;
+    }
+</style>
+</head>
+<body>
+  <div class="div">
+      <img src="image1.jpeg" class="ax" style="width:100%; height:60%">
+      <img src="image2.jpeg" class="ax" style="width:100%; height:60%">
+      <img src="image3.jpeg" class="ax" style="width:100%; height:60%">
+      <img src="image4.jpeg" class="ax" style="width:100%; height:60%">
+      <img src="image5.jpeg" class="ax" style="width:100%; height:60%">
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <script>
+    var slideIndex=0;
+    showDivs(slideIndex);
+
+    function plusDivs(n){
+      showDivs(slideIndex+=n)
+    }
+
+    function showDivs(n){
+      var i;
+      var x=document.getElementsByClassName("ax");
+      if(n>x.length){slideIndex=1}
+      if(n<1){slideIndex=x.length}
+
+      for(i=0;i<x.length;i++){
+        x[i].style.display="none";
+      }
+        x[slideIndex-1].style.display="block";
+      }
+
+  </script>
+
+
+</body>
+</html>

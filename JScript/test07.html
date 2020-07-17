@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style type="text/css">
+		table{
+			border: 1px solid black;
+			height: 50px;
+
+		}
+		tr,td
+		{
+			border: 1px solid black;
+			width: 90px;
+			height: 60px;
+			text-align: 
+		}
+		#inp1{
+			width: 90px;
+			height: 50px;
+		}
+		#inp2{
+			width: 90px;
+			height: 50px;
+		}
+		#inp3{
+			width: 90px;
+			height: 50px;
+		}
+		#inp4{
+			width: 90px;
+			height: 50px;
+		}
+		.but{
+			width: 90px;
+			height: 60px;
+			font-weight: 900;
+			font-size: 30px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<input type="text" id="inp1" >
+	<input type="text" id="inp2" >
+	<input type="text" id="inp3" >
+	<input type="text" id="inp4" > 
+
+	<table class="tbl" >
+	<tr>
+		<td><button type="button" class="but" onclick="func('*')">*</button></td>
+		<td><button type="button" class="but" onclick="func('/')">/</button></td>
+		<td><button type="button" class="but" onclick="func('-')">-</button></td>
+		<td><button type="button" class="but" onclick="func('+')">+</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('.')">.</button></td>
+		<td><button type="button" class="but" onclick="func('9')">9</button></td>
+		<td><button type="button" class="but" onclick="func('8')">8</button></td>
+		<td><button type="button" class="but" onclick="func('7')">7</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('6')">6</button></td>
+		<td><button type="button" class="but" onclick="func('5')">5</button></td>
+		<td><button type="button" class="but" onclick="func('4')">4</button></td>
+		<td><button type="button" class="but" onclick="func('3')">3</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('2')">2</button></td>
+		<td><button type="button" class="but" onclick="func('1')">1</button></td>
+		<td><button type="button" class="but" onclick="func('0')">0</button></td>
+		<td><button type="button" class="but" onclick="func('=')">=</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('C')">C</button></td>
+	</tr>
+	</table>
+</body>
+
+
+<script type="text/javascript">
+
+	function func(k)
+	{
+		var str;
+		if (k=='+' || k=='-' || k=="*" || k=="/")
+		{
+		document.getElementById("inp3").value=document.getElementById("inp1").value;
+		document.getElementById("inp2").value=k;
+		str="";
+		}
+
+		else if(k=='=')
+		 {
+		 	if(document.getElementById("inp2").value=="+")
+		 		{(document.getElementById("inp4").value)=parseInt(document.getElementById("inp3").value)+parseInt(document.getElementById("inp1").value)
+				}
+
+		 	if(document.getElementById("inp2").value=="-")
+		 		{(document.getElementById("inp4").value)=parseInt(document.getElementById("inp3").value)-parseInt(document.getElementById("inp1").value)
+				}
+
+		 	if(document.getElementById("inp2").value=="*")
+		 		{(document.getElementById("inp4").value)=parseInt(document.getElementById("inp3").value)*parseInt(document.getElementById("inp1").value)
+				}				
+
+		 	if(document.getElementById("inp2").value=="/")
+		 		{(document.getElementById("inp4").value)=parseInt(document.getElementById("inp3").value)/parseInt(document.getElementById("inp1").value)
+				}
+		 }
+
+		 else if(k=="C"){
+		 	document.getElementById("inp1").value="";
+		 	document.getElementById("inp2").value="";
+		 	document.getElementById("inp3").value="";
+		 	document.getElementById("inp4").value="";
+		 }
+
+		 else if(k=="."){
+		 	
+		 }
+
+
+			else
+	     		str=document.getElementById("inp1").value+k;
+		
+		document.getElementById("inp1").value=str;
+	}
+
+</script>
+</html>

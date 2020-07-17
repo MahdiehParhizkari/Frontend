@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>colorSlideshow</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+</head>
+<style>
+	.btn{
+		border-radius:3px;
+		background-color:none;
+		border-color:grey;
+	}
+	.body{
+		text-align:center;
+		padding-top:200px;
+		background-color:none;
+	}
+</style>
+<body>
+	<div class="body">
+		<button type="button" onclick="changecolor()" class="btn">Click Me!</button>
+	</div>
+
+	<script>
+		const colors=['red', 'purplr', 'yellow', 'pink', 'blue', 'black']
+		var button=document.querySelector('btn')
+		var body=document.querySelector('body')
+
+		body.style.backgroundColor='violet'
+		button.addEventListener('click',changecolor)
+
+		function changecolor(){
+			var colorIndex=parseInt(Math.random()*colors.length)
+			body.style.backgroundColor=colors[colorIndex]
+		}
+
+
+	</script>
+
+</body>
+</html>

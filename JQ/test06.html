@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Light</title>
+
+	<style type="text/css">
+		#div1{
+			text-align:center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="div1">
+	<h1>Turn the light on and off<br> by clicking the bulb!</h1>
+	<img src="lightoff.png" onclick="changeimage()" id="myImage">
+	</div>
+
+	<script type="text/javascript">
+		function changeimage(){
+			var image=document.getElementById("myImage");
+			if(image.src.match("lighton.png")){
+				image.src="lightoff.png";
+			}else{
+				image.src="lighton.png";
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>

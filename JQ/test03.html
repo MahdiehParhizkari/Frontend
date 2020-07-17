@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>imageSlider</title>
+</head>
+<body>
+	<h1>Image Slider</h1>
+	<div id="div1">
+
+		<div class="arrow"><img id="left" src="./images/left-arrow.png" class="image"></div>
+		<div class="arrow"><img id="right" src="./images/right-arrow.png" class="image"></div>
+	</div>
+    <script src="app.js"></script>
+
+    <script>
+	let images=['image1.jpeg','image2.jpeg','image3.jpeg','image4'.jpeg',image5.jpeg']
+	let i=0;
+
+	document.getElementById("div1").style.background=`url(./images/${images[0]})`;
+
+	document.querySelectorAll('.arrow').forEach(function(arrow){
+		arrow.addEventListener('click', function(e){
+			if(e.target.id==="left")
+				i--;
+			if(i<0){
+				i=images.length-1;
+			}
+			document.getElementById("div1").style.background=`url(./images/${images[0]})`;
+			} else if (e.target.id==="right") {
+            i++;
+            if (i >= images.length ){
+                i = 0;
+            }
+            document.getElementById("div1").style.background = `url(./images/${images[i]})`;
+        }
+    });
+	});
+	</script>
+
+</body>
+</html>

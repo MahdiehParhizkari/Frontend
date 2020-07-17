@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StopWatch</title>
+	<style type="text/css">
+		.div{
+			background-color: orange;
+			text-align: center;
+			border-style: solid;
+			border-color: black;
+			width: 500px;
+			height: 400px;
+			color: white;
+			padding-top: 10%;
+			font-family: tohoma;
+			font-size: 25px;
+			font-weight: 80;
+		}
+
+		#but1{
+			background-color: orange;
+			border-style: solid;
+			border-color: white;
+			color: white;
+			border-radius: 4px;
+			width: 80px;
+			height: 40px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		#but2{
+			background-color: orange;
+			border-style: solid;
+			border-color: white;
+			color: white;
+			border-radius: 4px;
+			width: 80px;
+			height: 40px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		#but3{
+			background-color: orange;
+			border-style: solid;
+			border-color: white;
+			color: white;
+			border-radius: 4px;
+			width: 80px;
+			height: 40px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		button:hover{
+			border-color: white;
+			color: orange;
+			background-color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="div">
+	<h2 class="h2">STOPWATCH</h2>
+	<h2>VANILLA JAVASCRIPT STOPWATCH</h2>
+	<p><span id="sec">00</span>:<span id="msec">00</span></p>
+	<button id="but1" onclick="start()">Start</button>
+	<button id="but2" onclick="stop()">Stop</button>
+	<button id="but3" onclick="reset()">Reset</button>
+
+	</div>
+</body>
+<script>
+	var Interval;
+	var sec="00";
+	var msec="00";
+
+	document.getElementById("but1").onclick=function(){
+
+		clearInterval(Interval);
+		Interval=setInterval(startTimer, 10);
+	}
+
+	document.getElementById("but2").onclick=function(){
+		clearInterval(Interval);
+	}
+
+	document.getElementById("but3").onclick=function(){
+		clearInterval(Interval);
+		sec="00";
+		msec="00";
+		document.getElementById("sec").innerHTML=sec;
+		document.getElementById("msec").innerHTML=msec;
+	}
+
+
+	function startTimer(){
+		msec++;
+
+		if(msec<9){
+			document.getElementById("msec").innerHTML="0"+msec;
+	}
+		if (msec>9) {
+			document.getElementById("msec").innerHTML=msec;		
+		}
+
+		if(msec>99){
+			console.log("sec");
+			sec++;
+			document.getElementById("sec").innerHTML="0"+sec;
+			msec=0;
+			document.getElementById("msec").innerHTML="0"+0;
+		}
+		if(sec>9){
+			document.getElementById("sec").innerHTML=sec;		
+
+		}
+
+	}
+</script>
+</html>

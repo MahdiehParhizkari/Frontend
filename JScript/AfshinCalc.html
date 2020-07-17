@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style type="text/css">
+		table{
+			border: 1px solid black;
+			height: 50px;
+
+		}
+		tr,td{
+			border: 1px solid black;
+			width: 90px;
+			height: 60px;
+			text-align: 
+		}
+		#inp{
+			width: 384px;
+			height: 60px;
+		}
+		.but{
+			width: 90px;
+			height: 60px;
+			font-weight: 900;
+			font-size: 30px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<input type="text" id="inp" />
+	<table class="tbl" >
+	<tr>
+		<td><button type="button" class="but" onclick="func('*')">*</button></td>
+		<td><button type="button" class="but" onclick="func('/')">/</button></td>
+		<td><button type="button" class="but" onclick="func('-')">-</button></td>
+		<td><button type="button" class="but" onclick="func('+')">+</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('.')">.</button></td>
+		<td><button type="button" class="but" onclick="func('9')">9</button></td>
+		<td><button type="button" class="but" onclick="func('8')">8</button></td>
+		<td><button type="button" class="but" onclick="func('7')">7</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('6')">6</button></td>
+		<td><button type="button" class="but" onclick="func('5')">5</button></td>
+		<td><button type="button" class="but" onclick="func('4')">4</button></td>
+		<td><button type="button" class="but" onclick="func('3')">3</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('2')">2</button></td>
+		<td><button type="button" class="but" onclick="func('1')">1</button></td>
+		<td><button type="button" class="but" onclick="func('0')">0</button></td>
+		<td><button type="button" class="but" onclick="func('=')">=</button></td>
+	</tr>
+
+	<tr>
+		<td><button type="button" class="but" onclick="func('C')">C</button></td>
+	</tr>
+	</table>
+</body>
+
+
+<script type="text/javascript">
+
+		function func(k)
+		{
+			var str;
+			str=(document.getElementById("inp").value)+k;
+
+		//alert (k);
+		//		if (k==0 || k==1) 
+		//		return 1;
+		//	else
+				
+		document.getElementById("inp").value=str;
+		//return (k);s
+		}
+
+
+
+</script>
+</html>

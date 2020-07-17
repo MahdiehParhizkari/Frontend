@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calc</title>
+    <style type="text/css">
+        #kol{
+            text-align: center;
+            border: 3px solid rgba(51,3,3,0.8);
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            margin: 100px auto;
+        }
+
+        #tit{
+            background-color: rgb(51,3,3,0.8);
+            color: white;
+            text-align: center;
+            padding: 1px 10px;
+            text-transform: uppercase;
+        }
+        #inp1{
+            box-shadow: 2px;
+            width: 60%;
+           
+        }
+
+        #but{
+            text-align: center;
+        }
+        #each{
+             font-size: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="kol">
+    <form>
+        <p id="tit">TIP CALCULATOR</p>
+        <div id="calculator">
+        <p>How much was your bill?</p>
+        <p>$ <input type="text" id="inp1" placeholder="Bill Amount" /></p>
+
+        <p>How was your service?</p>
+        <select id="brows" >
+            <option disabled selected value="0">-- Choose an Option --</option>
+            <option value="0.3">30% - Outstanding</option>
+            <option value="0.2">20% - Good</option>
+            <option value="0.15">15% - It was OK</option>
+            <option value="0.1">10% - Bad</option>
+            <option value="0.05">5% - Terrible</option>
+        </select>
+
+    </form>
+    
+        <p>How many people are sharing the bill?</p>
+        <input type="text" id="inp2" placeholder="Number of People" /> people </br></br>
+        <button id="but">CALCULATE</button></br></br>
+
+        <div id="totalTip">
+        <sup>$</sup><span id="tip">0.00</span>
+        <small id="each">each</small>
+        </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="tipcalculator.js">
+
+        function calculateTip(){
+            if (document.getElementById("inp1").value==="" || document.getElementById("brows").value==0) {
+                alert("Please enter values;");
+                return;
+            }
+
+            if(document.getElementById("inp2").value==="" || document.getElementById("inp2").value <=1){
+                document.getElementById("inp2").value=1;
+               document.getElementById(each).style.display="none";
+               }else{
+                document.getElementById("each").style.display="block";
+               }
+            var total=(document.getElementById("inp1").value*ocument.getElementById("brows").value)/document.getElementById("inp2").value;
+
+            total=Math.round(total*100)/100;
+
+            total=total.toFixed(2);
+
+            document.getElementById("totalTip").style.display = "block";
+            document.getElementById("tip").innerHTML = total;
+
+            document.getElementById("totalTip").style.display = "none";
+            document.getElementById("each").style.display = "none";
+
+        }
+
+
+        document.getElementById("but").onclick=function(){
+            calculateTip();
+            }
+    </script>
+</body>
+</html>

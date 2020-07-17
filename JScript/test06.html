@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.div1{
+			text-align: center;
+			width: 60%;
+			height: 60%;
+			border-style: solid;
+			border-color: white;
+			border-radius: 3px;
+			position: absolute;
+			top: 20%;
+			left:20%;
+		}
+
+		.div2{
+			font-size: 50px;
+			font-weight: 500;
+			color: white;
+
+		}
+
+		#demo{
+			font-size: 70px;
+		}
+
+		#low{
+			background-color: blue;
+			border-radius: 4px;
+			border-color: blue;
+			height: 40px;
+			width: 120px;
+			color: white;
+			cursor: pointer;
+
+		}
+
+		#add{
+			background-color: blue;
+			border-radius: 4px;
+			border-color: blue;
+			height: 40px;
+			width: 120px;
+			color: white;
+			cursor: pointer;
+
+		}
+
+		
+	</style>
+</head>
+
+
+	<body style="background-color: #B5651D;">
+		<div>
+
+			<div>COUNTER</div>
+				<p id="demo">0</p>
+
+
+			<div style="padding: 30px">
+				<input type="button" value="LOWER COUNT" id="low" />
+				<input type="button" value="ADD COUNT" id="add" />
+			</div>
+				
+		</div>
+	</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+  $("#add").click(function(){
+				var demo=parseInt($( "p" ).text());
+				var y=demo+1;
+				$( "p" ).text(y);
+  });
+    $("#low").click(function(){
+				var demo=parseInt($( "p" ).text());
+				var y=demo-1;
+				$( "p" ).text(y);
+  });
+			
+
+});
+
+	</script>
+</html>

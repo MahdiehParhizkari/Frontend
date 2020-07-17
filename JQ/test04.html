@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<title>ToDoList</title>
+	<style>
+		#demo{
+			background-color:lightpink;
+		}
+		#input{
+			width:400px;
+			height:35px;
+			border-color:lightgreen
+			border-radius:3px;
+		}
+
+		.btn1{
+			width:100px;
+			height:40px;
+			border-radius:3px;
+			border-color:lightgreen;
+			color:lightgreen;
+			background-color: white;
+			cursor:pointer;
+			font-size:15px;
+		}
+		#demo1{
+			text-align:center;
+		}
+		#btn2{
+			width:100px;
+			height:40px;
+			border-radius:3px;
+			border-color:lightgreen;
+			color:lightgreen;
+			background-color: white;
+			cursor:pointer;
+			font-size:15px;
+		}
+		a:hover{
+			background-color:lightgreen;
+			color:black;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div style="text-align: center;">
+	<div id="demo"></div>
+	<h1>To Do List</h1>
+
+	<input type="text" id="input" placeholder="Name..."><button type="button" class="btn1" onclick="myF1()"><a>Add Item</a></button></input><br><br>
+	<p id="demo1"></p>
+
+	<button id="btn2">Clear Items</button>
+	</div>
+</body>
+
+<script>
+	var Tasks = new Array()
+	var cnt = 0;
+
+	function myF1(){
+		var taskname = document.getElementById("input").value;
+		var DoneTask = "DoneTask"+cnt;
+		var task = {taskname : taskname, DoneTask : DoneTask}
+		Tasks[cnt++]=task;
+
+		if(taskname==""){
+			document.getElementById("demo").innerHTML="Please Enter Valid Value";
+		}
+	
+			var table = "<table>";
+			for(var i=0; i<Tasks.length; ++i)
+			{
+				table += "<tr>"
+				table += "<td>" +Tasks[i].taskname+ "</td>"
+
+				table += "<td><button class="+Tasks[i].DoneTask+" onclick='DoneTask()'><i class='fas fa-check-circle'></i></button></td>"
+
+				table += "<td><button class='btn4'><i class='fa fa-edit'></i></button></td>"
+
+				table += "<td><button class='btn5'><i class='fa fa-trash'></i></button></td>"
+
+				table += "</tr>"
+				}
+			table += "</table>"
+
+			document.getElementById('demo1').innerHTML=table;
+			}
+
+</script>
+<script>
+  	$(document).ready(function(){
+   		$("#btn2").click(function(){
+   			$("#demo1").remove();
+    		});
+    	});
+</script>
+
+<script>
+  	/*function DoneTask(){
+  		document.getElementById("demo1").style.textDecoration="line-through";
+  	}*/
+
+
+    function DoneTask()
+    {
+        var x = document.getElementById("demo1").cells;
+        x[0].innerHTML = "i want to change my cell color";
+        x[0].style.textDecoration="line-through";           
+    }
+</script>
+</html>

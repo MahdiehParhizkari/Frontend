@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NEWS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>
+    	$(document).ready(function(){
+    		$(".head").click(function(){
+    			$(".matn").toggle("slow");
+    		});
+    	});
+    </script>
+
+	<style>
+		.ul{
+			direction:rtl;
+			cursor:pointer;
+			text-decoration:none;
+
+		}
+		.li21{
+			display:none;
+			padding-right: 10px;
+		}
+		.head{
+			text-align:center;
+			border:3px solid lightblue;
+			cursor:pointer;
+		}
+		.matn{
+			text-align:center;
+			display:none;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".li2").click(function(){
+				$(".li21").toggle();
+			});
+		});
+	</script>
+
+</head>
+<body>
+	
+    <ul class="ul">
+    	<li><a href="#">صفحه اصلی</a></li>
+
+    	<li class="li2">خبرها
+    		<li class="li21">خبر اول</li>
+    		<li class="li21">خبر دوم</li>
+    		<li class="li21">خبر سوم</li>
+    		<li class="li21">خبر چهارم</li>
+    	</li>
+
+    	<li><a href="alert(09123456789)">تماس با ما</a></li>
+    </ul>
+
+    <h3 class="head">خبر اول</h3>
+    <p class="matn">متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر</p>
+ 
+    <h3 class="head">خبر دوم</h3>
+    <p class="matn">متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر</p>
+
+    <h3 class="head">خبر سوم</h3>
+    <p class="matn">متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر</p>
+
+    <h3 class="head">خبر چهارم</h3>
+    <p class="matn">متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر متن خبر</p>
+
+
+</body>
+</html>

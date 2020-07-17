@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script type="text/javascript">
+	    	function Func(k)
+		    {
+				if (k==0 || k==1) 
+				return 1;
+		    	else
+				return (k*factorial(k-1));
+	    	}
+
+			{   var n = parseInt (document.getElementById('txtnum1').value)
+				var m = parseInt (document.getElementById('txtnum2').value)	    	
+			function multiply()
+			{
+				var n = parseInt (document.getElementById('txtnum1').value)
+				var m = parseInt (document.getElementById('txtnum2').value)
+				alert (n*m)
+			}
+
+			function plus()
+			{
+				var n = parseInt (document.getElementById('txtnum1').value)
+				var m = parseInt (document.getElementById('txtnum2').value)
+				alert (n+m)
+			}
+
+			function minus()
+			{
+				var n = parseInt (document.getElementById('txtnum1').value)
+				var m = parseInt (document.getElementById('txtnum2').value)
+				alert (n-m)
+			}
+
+			function div()
+			{   var n = parseInt (document.getElementById('txtnum1').value)
+				var m = parseInt (document.getElementById('txtnum2').value)
+				alert (n/m)
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txtnum1" />
+		<input type="text" id="txtnum2" /></br></br>
+
+		<input type="button" value="+" onclick="plus()" />
+		<input type="button" value="-" onclick="minus()" />
+		<input type="button" value="/" onclick="div()" />
+		<input type="button" value="*" onclick="multiply()" />
+
+	</body>
+</html>
