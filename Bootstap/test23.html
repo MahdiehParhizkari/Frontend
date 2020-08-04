@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <body>
+        <div class="w3-container w3-center">
+            <a href="javascript:void(0)" class="w3-red w3-xlrage"
+            style="margin-top:200px;" onclick="document.getElementById('id1').style.display='block'"><i class="fa fa-pencil"></i></a>
+        </div>
+
+        <div id="id1" class="w3-modal">
+            <div class="w3-animate-zoom w3-modal-content">
+                <div class="w3-container w3-red w3-padding">
+                    <span onclick="document.getElementById('id1').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+                    <h2>Send Mail</h2>
+                </div>
+                <div class="w3-panel">
+                    <label>To</label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text">
+                    <label>From</label>
+                    <input class="w3-input w3-border w3-margin-button" type="text">
+                    <label>Subject</label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text">
+                    <input class="w3-input w3-border w3-margin-bottom" style="height:150px;" placeholder="What's on your mind?">
+                    <div class="w3-section">
+                        <a class="w3-button w3-red" onclick="document.getElementById('id1').style.display='none'">Cancel <i class="fa fa-remove"></i></a>
+                        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
