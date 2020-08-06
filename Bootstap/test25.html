@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
+    <style>
+        #form{
+            border: 3px solid blue;
+            padding: 20px;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <form id="form">
+                <label>kind of bread:</label>
+                <select name="bread" id="bread">
+                    <option>barbari</option>
+                    <option>sangak</option>
+                    <option>lavash</option>
+                    <option>toost</option>
+                </select>
+                <input type="number">
+                <br><br>
+
+                <label>kind of milk:</label>
+                <select name="milk" id="milk">
+                    <option>free lactos</option>
+                    <option>free fat</option>
+                    <option>free suger</option>
+                    <option>low fat</option>
+                    <option>high fat</option>
+                </select>
+                <input type="number">
+                <div class="content">
+                    <a type="button" class="btn btn-danger"
+                    onclick="close()">Cancel<i class="fas fa-close"></i></a>
+                    <a type="button" class="btn btn-primary float-right" onclick="document.getElementById('id01').style.display='none'">Register<span class="oi oi-check"></span></a>
+                </div>
+            </form>
+
+
+            <div class="modal" id="id01">
+                <div class="modal-content">
+                    <div class="container pt-10 bg-danger">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="button bg-danger float-right w3-xxlarge"><span class="oi" data-glyph="check"></span></span>
+                        <h2>Register</h2>
+                    </div>
+                    <div class="panel">
+                        <label>To</label>
+                        <input class="input" type="text">
+                        <label>From</label>
+                        <input class="input" type="text">
+                        <label>Subject</label>
+                        <input class="input" type="text">
+                        <input class="input" style="height:150px;" placeholder="What's on your mind?">
+                    </div>
+
+                    <div class="section">
+                        <a class="btn btn-danger" type="button" onclick="document.getElementById('id1').style.display='none'">Cancel <span class="oi oi-x"></span></a>
+                        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send <span class="oi oi-check"></span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
