@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	.card{
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="card">
+		<div>
+		<button onclick="switchLight(true); return false;">Turn on light</button>
+		<button onclick="switchLight(false); return false;">Turn off light</button>
+		<button onclick="switchLight(); return false;>Tuggle light</button>
+		</div>
+
+		<img id="light-bulb" class="light" src="light-on.jpeg">
+		
+	</div>
+
+
+	<script>
+		function switchLight(value){
+			if(typeof value == 'undefined'){
+				if(lightBulb.src == 'light-on.jpeg')
+					value = false
+			}else{
+				value = true
+			}
+
+
+
+			var lightBulb = document.getElementById('light-bulb')
+
+			if(value == true){
+				lightBulb.src = 'light-on.jpeg'
+				document.querySelector('html').style=''
+			}else{
+				lightBulb.src = 'light-off.jpeg'
+				document.querySelector('html').style='background: #666666'
+				
+			}
+		}
+	</script>
+</body>
+</html>
